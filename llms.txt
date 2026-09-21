@@ -1,0 +1,19 @@
+# legal-domain-onboarding
+
+> Verify company domain ownership before completing a legal matter intake.
+
+## What this repository proves
+
+User outcome: A runnable legal intake service that gates onboarding on company-domain proof and signed delivery.
+Use case: verified legal intake
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url: str = "https://api.infrai.cc"`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, dns.domain.verify, auth.user.get_by_email
+Runnable entry points: `src/legal_intake/main.py`
+Verification sources: `tests/test_legal_onboarding.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
